@@ -1,0 +1,30 @@
+{
+  "name": "ep-nestjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node dist/main.js",
+    "start:dev": "ts-node-dev --respawn --transpile-only src/main.ts",
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "@nestjs/common": "*",
+    "@nestjs/core": "*",
+    "@nestjs/platform-express": "*",
+    "@nestjs/swagger": "*",
+    "@nestjs/typeorm": "*",
+    "reflect-metadata": "*",
+    "typeorm": "*",
+    "pg": "*",
+    "class-transformer": "*",
+    "class-validator": "*",
+    "dotenv": "*",
+    "@nestjs/mapped-types": "*"
+  },
+  "devDependencies": {
+    "typescript": "*",
+    "ts-node-dev": "*",
+    "ts-node": "*",
+    "@types/node": "*"
+  }
+}
