@@ -24,7 +24,7 @@ export class Employee {
   @Column()
   companyId: number;
 
-  @ManyToOne(() => Company, (company) => company.employees, { onDelete: 'RESTRICT' })
+  @ManyToOne(() => Company, (company) => company.employees, { onDelete: 'NO ACTION' })
   @JoinColumn({ name: 'companyId' })
   company: Company;
 }
