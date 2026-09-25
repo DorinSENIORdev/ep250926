@@ -8,14 +8,18 @@ require('dotenv').config();
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'postgres',
+      type: 'mssql',
       host: process.env.DB_HOST || 'localhost',
-      port: parseInt(process.env.DB_PORT || '5432', 10),
-      username: process.env.DB_USER || 'epuser',
-      password: process.env.DB_PASS || 'epsecret',
+      port: parseInt(process.env.DB_PORT || '1433', 10),
+      username: process.env.DB_USERNAME || 'sa',
+      password: process.env.DB_PASSWORD || 'yourStrong(!)Password',
       database: process.env.DB_NAME || 'epdb',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true
+      synchronize: true,
+      options: {
+        encrypt: false,
+        trustServerCertificate: true
+      }
     }),
     CompanyModule,
     EmployeeModule

@@ -1,6 +1,6 @@
 # EP250926 - Company / Employee API
 
-API NestJS cu TypeORM si PostgreSQL pentru relatia 1:N dintre `Company` si `Employee`.
+API NestJS cu TypeORM si Microsoft SQL Server pentru relatia 1:N dintre `Company` si `Employee`.
 
 ## Pornire cu Docker
 
@@ -12,7 +12,9 @@ Swagger: http://localhost:3000/api/docs
 
 ## Pornire locala
 
-Necesita PostgreSQL pornit si variabilele din `.env` configurate pentru baza de date locala.
+Necesita Microsoft SQL Server pornit, TCP/IP activat pe portul `1433` si variabilele din `.env` configurate pentru baza de date locala.
+
+Baza de date `epdb` poate fi creata in SSMS. Cu `synchronize: true`, tabelele sunt create automat la pornirea aplicatiei.
 
 ```bash
 npm install

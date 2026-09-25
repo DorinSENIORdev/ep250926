@@ -15,7 +15,7 @@
     "@nestjs/typeorm": "*",
     "reflect-metadata": "*",
     "typeorm": "*",
-    "pg": "*",
+    "mssql": "*",
     "class-transformer": "*",
     "class-validator": "*",
     "dotenv": "*",
