@@ -16,6 +16,10 @@ export class Employee {
   @Column({ length: 150 })
   name: string;
 
+  @ApiProperty({ example: 'str. Stefan cel Mare 1, Chisinau' })
+  @Column({ length: 255, default: '' })
+  postalAddress: string;
+
   @ApiProperty({ example: 12500.5, type: Number })
   @Column({ type: 'decimal', precision: 12, scale: 2 })
   salary: number;

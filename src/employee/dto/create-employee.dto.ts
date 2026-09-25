@@ -14,6 +14,12 @@ export class CreateEmployeeDto {
   @Length(1, 150)
   name: string;
 
+  @ApiProperty({ example: 'str. Stefan cel Mare 1, Chisinau' })
+  @IsString()
+  @IsNotEmpty()
+  @Length(1, 255)
+  postalAddress: string;
+
   @ApiProperty({ example: 12500.5, type: Number })
   @IsNumber({ maxDecimalPlaces: 2 })
   @Min(0)
